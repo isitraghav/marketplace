@@ -2,6 +2,7 @@ import HomePage from "../pages/home.jsx";
 import Search from "../pages/search.jsx";
 import Profile from "../pages/profile.jsx";
 import Messaging from "../pages/messaging.jsx";
+import Create from "../pages/create.jsx";
 
 var routes = [
   {
@@ -9,19 +10,23 @@ var routes = [
     component: HomePage,
   },
   {
-    path: "/home/",
+    path: "/home",
     component: HomePage,
   },
   {
-    path: "/search/",
+    path: "/search",
     component: Search,
   },
   {
-    path: "/profile/",
+    path: "/create",
+    component: Create,
+  },
+  {
+    path: "/profile",
     component: Profile,
   },
   {
-    path: "/messaging/",
+    path: "/messaging",
     component: Messaging,
   },
 ];
