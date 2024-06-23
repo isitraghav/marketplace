@@ -47,17 +47,17 @@ export default function CreatePage() {
   const [message, setMessage] = useState("");
 
   function publish() {
-    const titleRegex = /^[a-zA-Z0-9\s]+$/;
-    const contentRegex = /^[a-zA-Z0-9\s.]+$/;
+    const titleRegex = /^(.|\s)*[a-zA-Z]+(.|\s)*$/;
+    const contentRegex = /^(.|\s)*[a-zA-Z]+(.|\s)*$/;
     if (!titleRegex.test(title)) {
       setMessage(
-        "Title should contain only alphanumeric characters and spaces"
+        "Title should contain only alphanumeric characters and spaces",
       );
       return;
     }
     if (!contentRegex.test(content)) {
       setMessage(
-        "Content should contain only alphanumeric characters, spaces, and periods"
+        "Content should contain only alphanumeric characters, spaces, and periods",
       );
       return;
     }

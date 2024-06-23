@@ -1,9 +1,6 @@
 {
   "cwd": "C:\\Users\\Raghav\\Desktop\\marketplace",
-  "type": [
-    "web",
-    "capacitor"
-  ],
+  "type": ["web", "capacitor"],
   "name": "marketplace",
   "framework": "react",
   "template": "tabs",
@@ -18,8 +15,6 @@
   "customBuild": false,
   "pkg": "com.marketplace.app",
   "capacitor": {
-    "platforms": [
-      "android"
-    ]
+    "platforms": ["android"]
   }
 }

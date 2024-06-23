@@ -3,10 +3,9 @@ import { supabase } from "./supabase";
 
 const API_ENDPOINT = "https://marketplace-api-ten.vercel.app";
 
-// Get products from API
-export async function getFeed() {
+export async function getFeed(from, to) {
   try {
-    const response = await axios.get(`${API_ENDPOINT}/feed`);
+    const response = await axios.get(`${API_ENDPOINT}/feed/${from}/${to}`);
     console.log(response.data);
     return response.data;
   } catch (error) {

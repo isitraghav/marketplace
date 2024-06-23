@@ -6,5 +6,5 @@ export default function HomePage() {
     <Block>
       <p>Home tab</p>
     </Block>
-  </Page>
+  </Page>;
 }

@@ -12,24 +12,33 @@ const CardComponent = ({ mode, title, content, price, image }) => {
         />
       )}
       <CardContent className="flex">
-        <div>
-          {mode === "compact" && (
+        {mode === "compact" && (
+          <div className="w-1/3 mt-1">
             <img
               src={image}
               alt=""
-              className="h-20 aspect-square rounded-md object-cover object-center"
+              className="h-20 w-20 aspect-square rounded-md object-cover object-center"
             />
-          )}
+          </div>
+        )}
+        <div className={`${mode === "compact" ? "w-2/3 ml-2" : "w-full"}`}>
+          <h2
+            className={`text-${
+              mode === "compact" ? "2xl" : "xl"
+            } capitalize line-clamp-2`}
+          >
+            {title}
+          </h2>
+          <p
+            className={`line-clamp-3 text-${
+              mode === "compact" ? "sm" : "xs"
+            } opacity-50`}
+          >
+            {content}
+          </p>
         </div>
-        <div className="ml-2">
-          <h2 className="text-xl capitalize">{title}</h2>
-          <p className="opacity-50">{content}</p>
-        </div>
-        
       </CardContent>
-      <div className="ml-3 pb-2 text-lg opacity-70">
-        ${price}
-      </div>
+      <div className="ml-3 pb-2 text-lg opacity-70">${price}</div>
     </Card>
   );
 };

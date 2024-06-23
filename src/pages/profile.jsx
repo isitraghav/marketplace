@@ -44,10 +44,7 @@ export default function ProfilePage() {
     <Page name="profile">
       <Navbar title="Profile" />
       <Block strong className="flex flex-col justify-center items-center">
-        <label
-          htmlFor="file"
-          className="flex justify-center items-center"
-        >
+        <label htmlFor="file" className="flex justify-center items-center">
           <img
             src={
               imageSrc ||
